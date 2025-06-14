@@ -1,1 +1,1 @@
-# Detecci-n-de-patrones
+# Detección-de-patrones
