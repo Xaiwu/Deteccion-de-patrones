@@ -4,11 +4,13 @@
 #include <vector>
 #include <string>
 #include <fstream>
+#include <filesystem>
+
 
 class LectorDocumentos {
 public:
-    // Lee el archivo y retorna un vector con cada línea como elemento
-    std::vector<std::string> leerPorLineas(const std::string& nombreArchivo);
+    // Concatena todos los archivos de una carpeta en un string con separador
+    std::string concatenarDocumentosConSeparador(std::string& carpeta, char separador = '$');
 };
 
 #endif // LECTORDOCUMENTOS_H

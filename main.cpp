@@ -3,18 +3,24 @@
 
 int main(int argc, char* argv[]) {
     if (argc < 2) {
-        std::cerr << "Uso: " << argv[0] << " <nombre_archivo>\n";
+        std::cerr << "Uso: " << argv[0] << " <carpeta>\n";
         return 1;
     }
-
-    std::string nombreArchivo = argv[1];
     LectorDocumentos lector;
-    std::vector<std::string> lineas = lector.leerPorLineas(nombreArchivo);
+    std::string carpetaPath = argv[1];
+    std::string T = lector.concatenarDocumentosConSeparador(carpetaPath);
+    // std::cout << T << std::endl; // Ejemplo
+    //En caso de querer crear un txt con el texto T concatenado y mirarlo:
+    // std::string archivoSalida = "salidaDNA.txt";
 
-    // // Test de printeo
-    // for (const auto& linea : lineas) {
-    //     std::cout << linea << std::endl;
+    // std::ofstream salida(archivoSalida);
+    // if(!salida){
+    //     std::cerr << "No se pudo abrir el archivo\n";
+    //     return 1;
     // }
+    // salida << T;
+    // salida.close();
 
+    // std::cout << "Texto concatenado en " << archivoSalida << std::endl;
     return 0;
 }
