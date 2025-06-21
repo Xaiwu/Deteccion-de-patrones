@@ -6,6 +6,6 @@
 
 
 std::vector<int> calcularPI(std::string &patron);
-int KMP(std::string &patron, std::string &T);
+int KMP(std::string &patron, std::string &T, std::vector<int> &coincidencias_doc);
 
 #endif // KMP_H
