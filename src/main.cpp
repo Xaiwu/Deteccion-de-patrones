@@ -20,7 +20,7 @@ int main(int argc, char* argv[]) {
 
     LectorDocumentos lector;
     std::string T = lector.concatenarDocumentosConSeparador(carpetaPath, num_documentos);
-    std::vector<std::string> nombres_documentos = lector.leerPorLineas("orden_documentos.txt");
+    std::vector<std::string> nombres_documentos = lector.leerPorLineas("data/orden_documentos.txt");
     std::vector<int> coincidencias_doc(nombres_documentos.size(), 0);
 
     if (algoritmo == "KMP") {
