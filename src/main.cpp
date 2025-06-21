@@ -2,6 +2,7 @@
 #include "..\include\LectorDocumentos.h"
 #include "..\include\KMP.h"
 #include "..\include\BM.h"
+#include "..\include\RK.h"
 #include <chrono>
 
 int main(int argc, char* argv[]) {
@@ -47,6 +48,14 @@ int main(int argc, char* argv[]) {
         auto end = std::chrono::high_resolution_clock::now();
         double tiempo = std::chrono::duration<double>(end - start).count();
         std::cout << "BM;" << patron << ";" << veces << ";" << tiempo << std::endl;
+    }
+
+    else if (algoritmo == "RK") {
+        auto start = std::chrono::high_resolution_clock::now();
+        int veces = rabinKarp(patron, T, coincidencias_doc);
+        auto end = std::chrono::high_resolution_clock::now();
+        double tiempo = std::chrono::duration<double>(end - start).count();
+        std::cout << "RK;" << patron << ";" << veces << ";" << tiempo << std::endl;
     }
 
     else {
