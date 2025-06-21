@@ -2,5 +2,6 @@
 /English
 /Proteins
 /Sources
+/build
 *.exe
 *.txt
