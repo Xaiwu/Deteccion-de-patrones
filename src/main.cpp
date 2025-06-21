@@ -1,6 +1,7 @@
 #include <iostream>
-#include "LectorDocumentos.h"
-#include "KMP.h"
+#include "..\include\LectorDocumentos.h"
+#include "..\include\KMP.h"
+#include "..\include\BM.h"
 #include <chrono>
 
 int main(int argc, char* argv[]) {
@@ -28,7 +29,17 @@ int main(int argc, char* argv[]) {
         auto end = std::chrono::high_resolution_clock::now();
         double tiempo = std::chrono::duration<double>(end - start).count();
         std::cout << "KMP;" << patron << ";" << veces << ";" << tiempo << std::endl;
-    } else {
+    } 
+    
+    else if (algoritmo == "BM") {
+        auto start = std::chrono::high_resolution_clock::now();
+        int veces = boyerMoore(patron, T, coincidencias_doc);
+        auto end = std::chrono::high_resolution_clock::now();
+        double tiempo = std::chrono::duration<double>(end - start).count();
+        std::cout << "BM;" << patron << ";" << veces << ";" << tiempo << std::endl;
+    }
+
+    else {
         return 1;
     }
 

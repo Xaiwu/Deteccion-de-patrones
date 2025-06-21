@@ -1,4 +1,4 @@
-#include "LectorDocumentos.h"
+#include "..\include\LectorDocumentos.h"
 #include <iostream>
 std::string LectorDocumentos::concatenarDocumentosConSeparador(std::string& carpeta, int max_documentos, char separador) {
     namespace fs = std::filesystem; // Alias para filesystem, facilita el uso de fs::directory_iterator

@@ -1,4 +1,4 @@
-#include "KMP.h"
+#include "..\include\KMP.h"
 
 // Búsqueda del prefijo más largo y que a su vez sea sufijo
 std::vector<int> calcularPI(std::string &patron) {
