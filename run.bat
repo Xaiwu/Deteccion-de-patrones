@@ -36,4 +36,7 @@ for /L %%c in (1,1,%REPETICIONES%) do (
     )
 )
 
+REM Eliminar el archivo textoT.txt al final
+del data\textoT.txt
+
 pause

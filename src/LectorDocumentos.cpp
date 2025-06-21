@@ -1,5 +1,5 @@
 #include "..\include\LectorDocumentos.h"
-#include <iostream>
+
 std::string LectorDocumentos::concatenarDocumentosConSeparador(std::string& carpeta, int max_documentos, char separador) {
     namespace fs = std::filesystem; // Alias para filesystem, facilita el uso de fs::directory_iterator
     std::ostringstream oss;         // Stream para construir el string concatenado eficientemente
@@ -21,8 +21,6 @@ std::string LectorDocumentos::concatenarDocumentosConSeparador(std::string& carp
     return oss.str(); // Devuelve el gran string concatenado con separadores
 }
 
-
-
 std::vector<std::string> LectorDocumentos::leerPorLineas(const std::string& nombreArchivo) {
     std::vector<std::string> lineas; 
     std::ifstream archivo(nombreArchivo);
@@ -31,4 +29,19 @@ std::vector<std::string> LectorDocumentos::leerPorLineas(const std::string& nomb
         lineas.push_back(linea);
     }
     return lineas;
+}
+
+void LectorDocumentos::crearTxt(std::string& ruta, std::string& contenido) {
+    std::ofstream salida(ruta);
+    if (salida) {
+        salida << contenido;
+        salida.close();
+    }
+}
+
+std::string LectorDocumentos::cargarTxt(std::string& ruta) {
+    std::ifstream entrada(ruta);
+    if (!entrada) return "";
+    std::string contenido((std::istreambuf_iterator<char>(entrada)), std::istreambuf_iterator<char>());
+    return contenido;
 }
