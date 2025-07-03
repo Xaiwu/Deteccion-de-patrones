@@ -45,3 +45,18 @@ std::string LectorDocumentos::cargarTxt(std::string& ruta) {
     std::string contenido((std::istreambuf_iterator<char>(entrada)), std::istreambuf_iterator<char>());
     return contenido;
 }
+
+std::vector<std::string> LectorDocumentos::extraerPatrones(const std::string& texto, int cantidad, int long_patron) {
+    std::vector<std::string> patrones;
+    if (texto.size() < long_patron || cantidad <= 0) return patrones;
+
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(0, texto.size() - long_patron);
+
+    for (int i = 0; i < cantidad; ++i) {
+        int inicio = dis(gen);
+        patrones.push_back(texto.substr(inicio, long_patron));
+    }
+    return patrones;
+}

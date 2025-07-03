@@ -5,6 +5,7 @@
 #include <string>
 #include <fstream>
 #include <filesystem>
+#include <random>
 
 
 class LectorDocumentos {
@@ -14,6 +15,7 @@ public:
     std::vector<std::string> leerPorLineas(const std::string& nombreArchivo); 
     std::string cargarTxt(std::string& ruta);
     void crearTxt(std::string& ruta, std::string& contenido);
+    std::vector<std::string> extraerPatrones(const std::string& texto, int cantidad, int long_patron);
 };
 
 #endif // LECTORDOCUMENTOS_H
