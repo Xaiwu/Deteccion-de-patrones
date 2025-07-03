@@ -1,6 +1,7 @@
 @echo off
 echo algoritmo;patron;coincidencias;tiempo;num_docs;num_patrones > output\resultados_bm.csv
 echo algoritmo;patron;coincidencias;tiempo;num_docs;num_patrones > output\resultados_kmp.csv
+echo algoritmo;patron;coincidencias;tiempo;num_docs;num_patrones > output\resultados_rk.csv
 
 REM Número de repeticiones
 set REPETICIONES=20
@@ -32,6 +33,14 @@ for /L %%c in (1,1,%REPETICIONES%) do (
     for /f "usebackq delims=" %%p in ("data\patrones.txt") do (
         for /f "tokens=*" %%t in ('src\main.exe BM %CARPETA% %%p %NUM_DOCS%') do (
             echo %%t;!NUM_PAT! >> output\resultados_bm.csv
+        )
+    )
+)
+
+for /L %%c in (1,1,%REPETICIONES%) do (
+    for /f "usebackq delims=" %%p in ("data\patrones.txt") do (
+        for /f "tokens=*" %%t in ('src\main.exe RK %CARPETA% %%p %NUM_DOCS%') do (
+            echo %%t;!NUM_PAT! >> output\resultados_rk.csv
         )
     )
 )
