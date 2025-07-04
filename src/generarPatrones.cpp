@@ -1,6 +1,16 @@
 #include "..\include\LectorDocumentos.h"
 #include <iostream>
 #include <fstream>
+#include <set>
+
+std::string limpiarSaltos(const std::string& s) {
+    std::string limpio;
+    for (char c : s) {
+        if (c != '\n' && c != '\r' && c != '\t') limpio += c;
+    }
+    return limpio;
+}
+
 
 int main(int argc, char* argv[]) {
     if (argc < 5) {
@@ -21,18 +31,30 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    auto patrones = lector.extraerPatrones(texto, cantidad, longitud);
+    std::set<std::string> patrones_unicos;
+    int intentos = 0, max_intentos = cantidad * 10;
+
+    while ((int)patrones_unicos.size() < cantidad && intentos < max_intentos) {
+        auto nuevos = lector.extraerPatrones(texto, 1, longitud);
+        if (!nuevos.empty()) {
+            std::string patron = limpiarSaltos(nuevos[0]);
+            if (patron.size() == longitud) { // Solo patrones del tamaño correcto
+                patrones_unicos.insert(nuevos[0]);
+            }
+        }
+        ++intentos;
+    }
 
     std::ofstream salida(ruta_salida);
     if (!salida) {
         std::cerr << "No se pudo abrir el archivo de salida.\n";
         return 1;
     }
-    for (const auto& patron : patrones) {
+    for (const auto& patron : patrones_unicos) {
         salida << patron << std::endl;
     }
     salida.close();
 
-    std::cout << "Patrones guardados en " << ruta_salida << std::endl;
+    std::cout << "Patrones unicos guardados en " << ruta_salida << ": " << patrones_unicos.size() << std::endl;
     return 0;
 }

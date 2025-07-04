@@ -5,7 +5,7 @@
 #include <vector>
 
 
-std::vector<int> calcularPI(std::string &patron);
-int KMP(std::string &patron, std::string &T, std::vector<int> &coincidencias_doc);
+std::vector<int> calcularPI(const std::string &patron);
+int KMP(const std::string &patron,const std::string &T,std::vector<int> &coincidencias_doc);
 
 #endif // KMP_H

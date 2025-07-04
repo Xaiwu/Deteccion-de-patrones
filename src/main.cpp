@@ -16,11 +16,11 @@ int main(int argc, char* argv[]) {
     std::string archivoPatrones = argv[3];
     int num_documentos = std::stoi(argv[4]);
 
-    std::string archivoTxt = "data/textoT.txt";
+    std::string archivoTxt = "../data/textoT.txt";
     std::string T;
 
     LectorDocumentos lector;
-    std::vector<std::string> nombres_documentos = lector.leerPorLineas("data/orden_documentos.txt");
+    std::vector<std::string> nombres_documentos = lector.leerPorLineas("../data/orden_documentos.txt");
     std::vector<int> coincidencias_doc(nombres_documentos.size(), 0);
 
     // Si el archivo existe, cargarlo, si no, crearlo con lector y guardar
@@ -31,13 +31,17 @@ int main(int argc, char* argv[]) {
         lector.crearTxt(archivoTxt, T);
     }
 
+
     // Leer todos los patrones
     std::vector<std::string> patrones = lector.leerPorLineas(archivoPatrones);
-    std::vector<double> tiempos;
+    // for (auto& patrom : patrones) {
+    //     std::cout << patrom << std::endl;
+    // }
+    // std::cout << patrones.size() << std::endl;
+    
     std::vector<int> coincidencias;
-
+    auto start = std::chrono::high_resolution_clock::now();
     for (auto& patron : patrones) {
-        auto start = std::chrono::high_resolution_clock::now();
         int veces = 0;
         if (algoritmo == "KMP") {
             veces = KMP(patron, T, coincidencias_doc);
@@ -49,20 +53,15 @@ int main(int argc, char* argv[]) {
             std::cerr << "Algoritmo no reconocido.\n";
             return 1;
         }
-        auto end = std::chrono::high_resolution_clock::now();
-        double tiempo = std::chrono::duration<double>(end - start).count();
-        tiempos.push_back(tiempo);
         coincidencias.push_back(veces);
     }
-
-    // Calcular promedio
-    double suma = std::accumulate(tiempos.begin(), tiempos.end(), 0.0);
-    double promedio = suma / tiempos.size();
+    auto end = std::chrono::high_resolution_clock::now();
+    double tiempo = std::chrono::duration<double>(end - start).count();
     int total_coincidencias = std::accumulate(coincidencias.begin(), coincidencias.end(), 0);
     
 
     std::cout << algoritmo << ";" << patrones.size()
-              << ";" << promedio
+              << ";" << tiempo
               << ";" << total_coincidencias
               << ";" << num_documentos
               << std::endl;
