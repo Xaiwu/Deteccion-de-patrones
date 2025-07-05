@@ -5,16 +5,16 @@ echo algoritmo;patrones;tiempo_promedio;coincidencias;numdocs > output\resultado
 
 
 REM Número de repeticiones
-set REPETICIONES=20
+set REPETICIONES=2
 
 REM Carpeta de documentos
-set CARPETA=data\textos
+set CARPETA=Sources
 
 REM Archivo de patrones
-set ARCHIVO_PAT=data\patronesDNA.txt
+set ARCHIVO_PAT=data\patronesSOURCES100.txt
 
 REM Número de documentos a leer, -1 si quiero usar todos
-set NUM_DOCS=2
+set NUM_DOCS=1
 
 REM Contar líneas en patrones.txt
 set NUM_PAT=0
