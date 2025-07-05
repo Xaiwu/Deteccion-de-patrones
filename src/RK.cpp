@@ -19,8 +19,10 @@ int rabinKarp(std::string &patron, std::string &text, std::vector<int> &coincide
 
     // asigna el valor hash para hp y ht
     for (int i = 0; i < m; i++){
-        hp = (b * hp + patron[i]) % p;
-        ht = (b * ht + text[i]) % p;
+        int temp1 = static_cast<int>(patron[i]);
+        int temp2 = static_cast<int>(text[i]);
+        hp = (b * hp + temp1) % p;
+        ht = (b * ht + temp2) % p;
     }
 
     // recorre el texto y compara los valores hash del patrón con el de la sección del texto actual
