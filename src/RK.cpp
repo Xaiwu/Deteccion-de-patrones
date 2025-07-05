@@ -49,8 +49,10 @@ int rabinKarp(std::string &patron, std::string &text, std::vector<int> &coincide
         }
         
         if (i < n - m){
-            
-            ht = (b * (ht - text[i] * h) + text[i + m]) % p;
+
+            int temp1 = static_cast<int>(text[i]);
+            int temp2 = static_cast<int>(text[i + m]);
+            ht = (b * (ht - temp1 * h) + temp2) % p;
 
             if (ht < 0)
                 ht += p;
