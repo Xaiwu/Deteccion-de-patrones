@@ -3,7 +3,7 @@
 std::string LectorDocumentos::concatenarDocumentosConSeparador(std::string& carpeta, int max_documentos, char separador) {
     namespace fs = std::filesystem; // Alias para filesystem, facilita el uso de fs::directory_iterator
     std::ostringstream oss;         // Stream para construir el string concatenado eficientemente
-    std::ofstream nombres("data/orden_documentos.txt");
+    std::ofstream nombres("../data/orden_documentos.txt");
     bool primero = true;            // Bandera para saber si es el primer archivo (para no anteponer el separador)
     int leidos = 0;                 // Cantidad de documentos leidos
     for (const auto& entry : fs::directory_iterator(carpeta)) { // Itera sobre cada archivo en la carpeta
