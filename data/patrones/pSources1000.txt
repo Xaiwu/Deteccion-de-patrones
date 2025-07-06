@@ -1,0 +1,1000 @@
+    
+   l
+   p
+   s
+   }
+  "I
+  */
+  0x
+  15
+  Be
+  Co
+  if
+  li
+  pr
+  so
+  un
+  ut
+  wh
+ " "
+ "VO
+ "rs
+ %d\
+ & 0
+ & S
+ (HS
+ (sb
+ * T
+ * t
+ **p
+ */ 
+ *de
+ *ob
+ - 1
+ /* 
+ 0x0
+ 0x2
+ 0x8
+ 0xa
+ 2))
+ 32 
+ 8; 
+ :  
+ : 0
+ < 1
+ = -
+ = 0
+ = N
+ = a
+ = {
+ == 
+ ACP
+ ADV
+ AKP
+ Ack
+ Add
+ CAS
+ DAC
+ Eng
+ Pix
+ RX_
+ Reg
+ Wid
+ [Tp
+ __i
+ all
+ and
+ are
+ as 
+ boa
+ buf
+ by 
+ can
+ cha
+ clo
+ e83
+ enu
+ err
+ fif
+ inf
+ ini
+ int
+ inw
+ it 
+ le3
+ mc3
+ mod
+ mus
+ net
+ of 
+ on 
+ or 
+ out
+ pre
+ res
+ ret
+ run
+ sho
+ so 
+ sta
+ swi
+ sym
+ tel
+ the
+ to 
+ tra
+ unl
+ up 
+ use
+ val
+ voi
+ wd3
+ wit
+ { l
+ {{0
+ ~FD
+"%s:
+"ABO
+#def
+#end
+%d:%
+%p, 
+& IC
+((de
+(ACE
+(ENI
+(Sta
+(dev
+(ere
+(eve
+(inf
+(int
+(por
+(str
+(tty
+(voi
+)  /
+) 20
+); /
+* 0x
+* 1 
+* DA
+* LC
+* Th
+* de
+*(C 
+*) S
+*0x0
+*tar
++ PC
+,   
+, "P
+, 0x
+, 30
+, fl
+, gi
+, th
+,0x0
+,0x1
+,0x8
+,0xb
+,0xf
+,dev
+- 1)
+----
+-1, 
+-199
+-= b
+->de
+->hw
+->re
+->rx
+..65
+.02.
+.\n"
+/* 0
+/* B
+/* C
+/* T
+/in.
+0   
+0)) 
+0, "
+0, 0
+0, 4
+0,0x
+00,0
+0000
+0004
+000d
+000e
+001,
+0022
+002e
+003f
+01, 
+018,
+01c,
+02 a
+02, 
+0200
+020c
+03, 
+0400
+04E,
+05, 
+08, 
+09,0
+0; i
+0_SC
+0_V2
+0a,0
+0x00
+0x0e
+0x23
+0x26
+0x3c
+0x43
+0x45
+0x4f
+0x50
+0x58
+0x7f
+0x8f
+0xa0
+0xa3
+0xac
+0xae
+0xaf
+0xe1
+0xf2
+0xf5
+0xf9
+0xff
+1" :
+1, 0
+10, 
+1000
+102b
+1140
+1}},
+2   
+200,
+2000
+2002
+2022
+2024
+2042
+21, 
+2410
+24x6
+2_Co
+3,0x
+3102
+32 a
+32)(
+3400
+360,
+4, 0
+4,0x
+4,SI
+4020
+41,0
+424e
+5,0x
+50_0
+527 
+5380
+58, 
+6,0x
+6561
+6a_h
+6e71
+72,0
+76*f
+78, 
+8 | 
+8, 0
+8000
+8201
+88,0
+8ee2
+8x.\
+9 WO
+9,0x
+920,
+97);
+97_G
+< 2)
+< TX
+= %d
+= 'n
+= 0;
+= 2;
+= li
+= nu
+= sn
+>= A
+>Con
+>Mod
+>SCp
+>Wor
+>com
+>cou
+>dis
+>hos
+>irq
+A li
+A0, 
+AAC_
+AC97
+ADDR
+ALLE
+AM o
+AMAr
+AP_A
+ARRO
+ASK_
+Addr
+B(Fl
+BIOS
+BL_C
+BSD 
+BYTE
+B_ST
+Byte
+C960
+C97_
+CDB.
+CH, 
+CHIP
+CI_A
+CONT
+CR c
+CRR_
+CR_7
+CSOR
+CTL_
+Chan
+Com 
+Cont
+Cpnt
+Cptr
+DING
+DSCR
+D_FL
+D_SC
+E AR
+E,__
+EE_W
+ELEC
+EMP 
+ERDP
+EVID
+EXTE
+Empt
+Enab
+G_HL
+GetD
+Grou
+HW_R
+HvLp
+ICEN
+ID, 
+ION)
+IPIE
+IRQ 
+ITER
+KNOW
+L },
+LE_B
+LIGN
+LUE 
+M wh
+MASK
+MODE
+NCHT
+NE; 
+NFO 
+NG p
+NU G
+NUM_
+N_IC
+O un
+O ve
+ODL_
+OMPA
+OM__
+ONTR
+OPTI
+Octa
+Offs
+P co
+PD_D
+PPED
+PRES
+P_MO
+Pari
+Port
+QUEU
+RATI
+RC_W
+REQ 
+RE_U
+RGMR
+RTED
+R_DS
+R_ND
+Regi
+Righ
+SCCB
+SCSI
+SI R
+SI b
+SK &
+SPLO
+SSIB
+STAR
+SUCC
+Ser.
+Silv
+Stat
+Sync
+T SC
+T af
+TCI_
+TIME
+TL  
+T_DL
+T_PM
+Targ
+UART
+Unlo
+V2_D
+VA, 
+VALI
+VgaT
+[0];
+[2];
+[MAX
+[cur
+\n")
+_ */
+_10,
+_1_9
+_700
+_ADD
+_ATC
+_CSR
+_CTR
+_FLU
+_HST
+_KB4
+_MOD
+_PRE
+_REQ
+_RES
+_SYN
+_USE
+_WID
+__AS
+_cir
+_dat
+_dep
+_dma
+_fla
+_net
+_nex
+_ops
+_pag
+_pre
+_pro
+_res
+_rx 
+_set
+_siz
+_tim
+_uid
+a = 
+a,0x
+a656
+aTra
+a_er
+aa00
+ac_m
+acce
+ace 
+ack"
+addr
+afa0
+ait1
+al82
+alCt
+ame,
+an (
+and)
+and;
+and_
+apte
+ard]
+arm,
+aryC
+as n
+ast)
+at t
+ate)
+ates
+atio
+atus
+b, 0
+b->l
+bble
+bdp+
+bios
+ble 
+ble.
+buff
+c */
+c vo
+c, 0
+c0,0
+c010
+c97_
+c_ad
+c_ge
+cach
+calD
+cal_
+cbMg
+ccb_
+cces
+ce I
+ceiv
+ck f
+clud
+comm
+cree
+csp-
+ct  
+ct B
+ctPe
+cter
+ctio
+ctly
+cyli
+d Sh
+d lo
+d sh
+d ta
+d(SC
+d001
+d18x
+dCac
+d\n"
+dapt
+data
+dati
+de =
+de__
+def 
+defi
+dex;
+dia_
+dr =
+dres
+e  A
+e + 
+e U3
+e UT
+e ad
+e al
+e as
+e at
+e ch
+e it
+e lo
+e ro
+e un
+e up
+e us
+e, 0
+e, t
+e28,
+eIdP
+e[Ch
+e_ob
+e_xm
+ead 
+eak;
+eak_
+earl
+eate
+ec d
+eck 
+eck5
+eck_
+ecti
+ed l
+ee =
+ee24
+ee40
+efin
+egis
+eing
+eisa
+ely 
+em >
+em_e
+emer
+en v
+end_
+endi
+ent 
+entr
+epro
+er->
+erRe
+essa
+et w
+etVa
+etti
+etur
+etva
+eue 
+ev, 
+ev,0
+ev_c
+evic
+f (F
+f 37
+f me
+f ou
+f th
+f(Re
+f(ho
+f(sc
+f,0x
+f7f,
+f820
+f_t 
+fals
+fc8,
+ffff
+ffse
+file
+fill
+fine
+fixe
+for 
+full
+fy i
+g > 
+g Fi
+g an
+g ca
+g of
+g++)
+g.h>
+g3, 
+ge_l
+gica
+glob
+gned
+h te
+hake
+hase
+heck
+hile
+hing
+host
+hul 
+iS31
+ibut
+ic p
+ice 
+iceI
+iced
+icks
+icmd
+id);
+idat
+idua
+idx=
+ight
+igne
+imil
+in f
+incl
+ind_
+ine 
+int 
+inte
+ioad
+ion 
+ion,
+ions
+irmw
+is t
+ison
+ithe
+iv(r
+ivat
+ives
+ize 
+k dr
+k_st
+kb->
+ks: 
+l = 
+l be
+l( (
+l(AE
+l2_r
+lBit
+lDev
+lEve
+l_to
+lanc
+last
+lbox
+ldRe
+le: 
+lect
+left
+linu
+list
+load
+loca
+lock
+lrea
+lse 
+ltic
+lue.
+mand
+mdCo
+me);
+me_s
+mman
+mpla
+msgl
+n -E
+n re
+nalR
+nary
+ncti
+nd->
+ndMa
+ndle
+ne  
+ne M
+ne N
+ne U
+ne o
+nece
+nect
+ned 
+nera
+next
+nfo-
+nfo.
+ng o
+ng[(
+ngth
+nk) 
+nnot
+nput
+nsig
+nt *
+nt _
+nter
+ntk(
+ntr_
+ntro
+nux/
+oadi
+oard
+obj)
+ockD
+of S
+oid 
+olar
+olat
+on S
+ons,
+ool 
+ool_
+op_p
+opco
+ors 
+ort,
+ost 
+ost)
+ost_
+otal
+ou h
+ount
+ousP
+out 
+ow a
+ower
+p, c
+p->s
+p->t
+poin
+port
+posi
+pret
+prev
+prin
+ptio
+ptor
+ptr-
+py o
+quen
+queu
+r + 
+r = 
+r co
+r re
+r ve
+r(Fl
+r1))
+rans
+rd h
+rds 
+read
+rect
+ree(
+requ
+retu
+retv
+rew_
+ring
+rint
+ript
+rive
+rmit
+rms 
+rn 0
+rn r
+roce
+rodu
+rogr
+rol)
+rrCa
+rray
+rt (
+rt o
+rt(N
+ruct
+rx_a
+s a 
+s(st
+sChu
+s\n"
+s_t 
+sage
+se a
+se {
+seT-
+se_a
+sens
+seri
+serv
+sgin
+sh b
+sidu
+sign
+sing
+skPa
+skbi
+snd_
+sor,
+sour
+sp%d
+sp->
+sp_r
+spac
+ssig
+ssin
+st p
+st->
+stat
+ster
+stly
+stru
+t 5.
+t = 
+t bo
+t fo
+t ne
+t re
+t to
+t->u
+t.  
+tAda
+tCla
+t_gl
+t_ti
+ta =
+ta i
+tand
+tati
+tbou
+tc58
+ted.
+temp
+tens
+ter.
+terr
+test
+th i
+the 
+this
+tial
+tic 
+tica
+til 
+tile
+time
+tion
+tmp)
+to a
+to t
+trol
+truc
+ts =
+ts w
+ts(c
+ts.r
+ts.t
+tt, 
+ttac
+tup 
+ture
+tus 
+u ca
+uall
+ubli
+uct 
+ueue
+uffe
+umbe
+unce
+unsi
+urat
+urn 
+urns
+us, 
+usAd
+usLo
+usMe
+use_
+ut8(
+ute_
+v->g
+vCal
+ve b
+vice
+vojt
+wSDR
+wSiz
+w_ct
+we c
+will
+wing
+wini
+x SC
+x er
+x, u
+x0, 
+x00,
+x006
+x00;
+x04,
+x05-
+x0d,
+x240
+x244
+x2e4
+x346
+x616
+x81,
+x83,
+x8ee
+x_ti
+xa3,
+xa46
+xba,
+xc00
+xjif
+y ne
+y to
+y(TW
+y.h>
+ype0
+ytes
+ze i
+{ ZO
+| (h
+}tem

@@ -26,12 +26,15 @@ std::vector<std::string> LectorDocumentos::leerPorLineas(const std::string& nomb
     std::ifstream archivo(nombreArchivo);
     std::string linea;
     while (std::getline(archivo, linea)) {
-        lineas.push_back(linea);
+        if (!linea.empty()) {
+            lineas.push_back(linea);
+        }
     }
     return lineas;
 }
 
-void LectorDocumentos::crearTxt(std::string& ruta, std::string& contenido) {
+
+void LectorDocumentos::crearTxt( const std::string& ruta,const std::string& contenido) {
     std::ofstream salida(ruta);
     if (salida) {
         salida << contenido;

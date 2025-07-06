@@ -28,7 +28,8 @@ int boyerMoore(std::string& patron, std::string& texto, std::vector<int> &coinci
             --j;
         if (j < 0) {
             ++veces;
-            coincidencias_doc[doc]++;
+            if (doc < coincidencias_doc.size())
+                coincidencias_doc[doc]++;
             // Desplaza tras coincidencia completa
             desplazamiento += (desplazamiento + pLen < tLen) ? pLen - badchar[(unsigned char)texto[desplazamiento + pLen]]: 1;
         } else {

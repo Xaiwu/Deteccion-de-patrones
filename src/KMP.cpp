@@ -1,7 +1,7 @@
 #include "..\include\KMP.h"
 
 // Búsqueda del prefijo más largo y que a su vez sea sufijo
-std::vector<int> calcularPI(std::string &patron) {
+std::vector<int> calcularPI(const std::string &patron) {
     int m = patron.length(); // Tamaño del patrón
     std::vector<int> PI(m); // Creación del vector PI que toma
     
@@ -19,13 +19,13 @@ std::vector<int> calcularPI(std::string &patron) {
         if(patron[i] == patron[j])
         {
             j++;
-            PI[i] = j;
         }  
+        PI[i] = j;
     }
     return PI;
 }
 
-int KMP(std::string &patron, std::string &T, std::vector<int> &coincidencias_doc) {
+int KMP(const std::string &patron,const std::string &T, std::vector<int> &coincidencias_doc) {
     int veces = 0;
     int m = patron.length();
     int n = T.length();
@@ -50,7 +50,8 @@ int KMP(std::string &patron, std::string &T, std::vector<int> &coincidencias_doc
         // Si se encontró una ocurrencia completa del patrón
         if (j == m) {
             veces++;
-            coincidencias_doc[doc]++;
+            if (doc < coincidencias_doc.size())
+                coincidencias_doc[doc]++;
             j = PI[j-1]; 
         }
     }

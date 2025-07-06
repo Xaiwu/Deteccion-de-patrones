@@ -14,7 +14,7 @@ public:
     std::string concatenarDocumentosConSeparador(std::string& carpeta, int max_documentos, char separador = '$');
     std::vector<std::string> leerPorLineas(const std::string& nombreArchivo); 
     std::string cargarTxt(std::string& ruta);
-    void crearTxt(std::string& ruta, std::string& contenido);
+    void crearTxt(const std::string& ruta, const std::string& contenido);
     std::vector<std::string> extraerPatrones(const std::string& texto, int cantidad, int long_patron);
 };
 
