@@ -8,19 +8,13 @@
 #include <iostream>
 #include <cstring>
 
-// Estructura para guardar el índice y el sufijo como std::string
 struct suffix {
-    int index;         // Índice de inicio del sufijo en el texto original
-    std::string suff;  // El sufijo como string
+    int index;   // índice de inicio del sufijo en el texto original
+    char *suff;  // puntero al sufijo dentro del texto
 };
 
-// Función de comparación para ordenar sufijos
-bool cmp(const suffix &a, const suffix &b);
-
-// Construye el arreglo de sufijos de un texto dado
-std::vector<int> buildSuffixArray(const std::string& txt);
-
-// Crea un archivo .txt con el arreglo de sufijos
-void crearTxt(const std::vector<int>& suffixArr);
+bool cmp(const struct suffix &a, const struct suffix &b);
+int *buildSuffixArray(char *txt, int n);
+void crearTxt(int *suffixArr, int n);
 
 #endif
