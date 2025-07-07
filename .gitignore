@@ -3,5 +3,6 @@
 /Proteins
 /Sources
 /build
+/data/suffix_arrays
 *.exe
 *.csv
