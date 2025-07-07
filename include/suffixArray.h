@@ -16,5 +16,6 @@ struct suffix {
 bool cmp(const struct suffix &a, const struct suffix &b);
 int *buildSuffixArray(char *txt, int n);
 void crearTxt(int *suffixArr, int n);
+std::vector<int> cargarTxt(const std::string& ruta);
 
 #endif

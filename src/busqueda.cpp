@@ -1,14 +1,14 @@
 #include "..\include\busqueda.h"
+#include "..\include\suffixArray.h"
+#include "..\include\LectorDocumentos.h"
 
 std::vector<int> posicionesPeso( std::string &T, char separador){
     std::vector<int> posiciones;
     separador = '$';
-    int doc = 0;
 
     for (int i = 0; i < T.size(); i++){
         if(T[i] == separador){
-            posiciones[doc] = i;
-            doc++;
+            posiciones.push_back(i);
         }
     }
 
@@ -60,5 +60,30 @@ std::set<int> documentosQueContienen( std::string &P,  std::string &T, std::vect
         int doc = documentoDe(pos, posciones);
         documentos.insert(doc);
     }
+    int veces = r - l;
     return documentos;
+}
+
+int main(){
+    LectorDocumentos lector;
+    std::string T;
+    std::vector<int> SA = cargarTxt("../data/suffix_arrays/suffixArray_DNA_5.txt");
+    std::string rutaT = "../data/textoT.txt";
+    std::string carpetaPath = "../data/textos/DNA";
+    int num_documentos = 5; // Cambia esto por el número de documentos que quieras procesar
+    if (std::filesystem::exists(rutaT)) {
+        T = lector.cargarTxt(rutaT);
+    } else {
+        T = lector.concatenarDocumentosConSeparador(carpetaPath, num_documentos);
+        lector.crearTxt(rutaT, T);
+    }
+    std::string patron = "AGTATCTA"; // Cambia esto por el patrón que quieras buscar
+    std::vector<int> posiciones = posicionesPeso(T, '$');
+
+    std::set<int> documentos = documentosQueContienen(patron, T, SA, posiciones);
+ 
+    for(int doc : documentos) {
+        std::cout << "El patrón '" << patron << "' se encuentra en el documento: " << doc << std::endl;
+    }
+    return 0;
 }
