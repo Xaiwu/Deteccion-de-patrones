@@ -22,7 +22,7 @@ g++ main.cpp LectorDocumentos.cpp KMP.cpp BM.cpp RK.cpp -I../include -o main.exe
 g++ busqueda.cpp LectorDocumentos.cpp suffixArray.cpp -I../include -o busqueda.exe
 ```
 
-### Compilar el ejecutable de para generar un Suffix Array (`genera_suffixArray.exe`):
+### Compilar el ejecutable para generar un Suffix Array (`genera_suffixArray.exe`):
 
 ```sh
 g++ suffixArray.cpp LectorDocumentos.cpp -I../include -o genera_suffixArray.exe
