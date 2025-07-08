@@ -1,4 +1,8 @@
 #include "..\include\BM.h"
+/*
+* Implementación del algoritmo de Boyer-Moore para búsqueda de patrones en texto.
+* Basada en https://www.geeksforgeeks.org/dsa/boyer-moore-algorithm-for-pattern-searching/
+*/
 
 // Función que construye la tabla de desplazamientos ("mal carácter")
 void malCaracter(std::string& patron, int pLen, int badchar[N_CHARS]) {
@@ -28,7 +32,8 @@ int boyerMoore(std::string& patron, std::string& texto, std::vector<int> &coinci
             --j;
         if (j < 0) {
             ++veces;
-            coincidencias_doc[doc]++;
+            if (doc < coincidencias_doc.size())
+                coincidencias_doc[doc]++;
             // Desplaza tras coincidencia completa
             desplazamiento += (desplazamiento + pLen < tLen) ? pLen - badchar[(unsigned char)texto[desplazamiento + pLen]]: 1;
         } else {
