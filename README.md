@@ -90,12 +90,4 @@ Esto creará el archivo `data/suffixArray.txt` y mostrará información sobre el
 ## Notas
 
 - Asegúrate de que los archivos de entrada y salida existan y tengan el formato esperado.
-- Si usas Windows, puedes ejecutar los scripts `.bat` incluidos para automatizar experimentos.
-
-
-
-
-## Notas
-
-- Asegúrate de que los archivos de entrada y salida existan y tengan el formato esperado.
-- Si usas Windows, puedes ejecutar los scripts `.bat` incluidos para automatizar experimentos.
+- Si usas Windows, puedes ejecutar los scripts `.bat` incluidos para automatizar experimentos (recuerda descomentar las experimentaciones que quieras realizar).
