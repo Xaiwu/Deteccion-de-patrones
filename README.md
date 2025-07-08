@@ -60,24 +60,7 @@ g++ busqueda.cpp LectorDocumentos.cpp suffixArray.cpp -I../include -o busqueda.e
 - Asegúrate de que los archivos de entrada y salida existan y tengan el formato esperado.
 - Si usas Windows, puedes ejecutar los scripts `.bat` incluidos para automatizar experimentos.
 
----
-```# Detección de Patrones
 
-## Requisitos
-
-- **Compilador C++** (recomendado: g++ de MinGW o similar)
-- Estructura de carpetas como en el repositorio (`src`, `include`, `data`, etc.)
-
-## Compilación manual con g++
-
-Abre una terminal en la raíz del proyecto y ejecuta:
-
-### Compilar el ejecutable principal (`main.exe`):
-
-```sh
-cd src
-g++ main.cpp LectorDocumentos.cpp KMP.cpp BM.cpp RK.cpp -I../include -o main.exe
-```
 
 ### Compilar el ejecutable de búsqueda con Suffix Array (`busqueda.exe`):
 
