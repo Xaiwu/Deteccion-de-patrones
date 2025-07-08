@@ -1,6 +1,8 @@
 #include "..\include\busqueda.h"
 #include "..\include\suffixArray.h"
 #include "..\include\LectorDocumentos.h"
+#include <fstream>
+#include <utility>
 
 std::vector<int> posicionesPeso( std::string &T, char separador){
     std::vector<int> posiciones;
@@ -49,7 +51,7 @@ int documentoDe(int post,  std::vector<int> &posiciones){
     return std::distance(posiciones.begin(), mI);
 }
 
-std::set<int> documentosQueContienen( std::string &P,  std::string &T, std::vector<int> &SA, std::vector<int> &posciones){
+std::pair<std::set<int>, int> documentosQueContienen( std::string &P,  std::string &T, std::vector<int> &SA, std::vector<int> &posciones){
     std::set<int> documentos;
 
     int l = limiteMenor(T,P,SA);
@@ -60,35 +62,73 @@ std::set<int> documentosQueContienen( std::string &P,  std::string &T, std::vect
         int doc = documentoDe(pos, posciones);
         documentos.insert(doc);
     }
-    return documentos;
+    
+    return std::make_pair(documentos, r - l);
 }
 
 int main(int argc, char* argv[]) {
-    // Modo de uso ..data/suffix_arrays/suffixArray_XXX_Y.txt ..data/textos/XXX num_doc patron
+    // Modo de uso: busqueda.exe [suffix_array_file] [carpeta_textos] [num_documentos] [archivo_patrones]
+    if (argc < 5) {
+        std::cerr << "Uso: " << argv[0] << " <suffix_array_file> <carpeta_textos> <num_documentos> <archivo_patrones>\n";
+        return 1;
+    }
+    
     LectorDocumentos lector;
     std::string T;
+    std::string rutaT = "data/textoT.txt";
+    
     std::vector<int> SA = cargarTxt(argv[1]);
-    std::string rutaT = "../data/textoT.txt";
-    std::string carpetaPath = argv[2]; // Cambia esto por la ruta de tu carpeta de documentos
-    int num_documentos = std::stoi(argv[3]); // Cambia esto por el número de documentos que quieras procesar
+    std::string carpetaPath = argv[2]; // Ruta de la carpeta de documentos
+    int num_documentos = std::stoi(argv[3]); 
+    std::string archivoPatrones = argv[4]; // Archivo con los patrones
+
     if (std::filesystem::exists(rutaT)) {
         T = lector.cargarTxt(rutaT);
     } else {
         T = lector.concatenarDocumentosConSeparador(carpetaPath, num_documentos);
         lector.crearTxt(rutaT, T);
     }
-    std::string patron = argv[4]; // Cambia esto por el patrón que quieras buscar
+    
     std::vector<int> posiciones = posicionesPeso(T, '$');
 
+    // Leer patrones del archivo
+    std::ifstream archivo(archivoPatrones);
+    if (!archivo.is_open()) {
+        std::cerr << "Error: No se pudo abrir el archivo de patrones: " << archivoPatrones << std::endl;
+        return 1;
+    }
+    
+    // Leer todos los patrones primero
+    std::vector<std::string> patrones;
+    std::string patron;
+    while (std::getline(archivo, patron)) {
+        if (!patron.empty()) {
+            patrones.push_back(patron);
+        }
+    }
+    archivo.close();
+    
+    int total_patrones = patrones.size();
+    
+    // Medir tiempo total de todos los patrones
     auto start = std::chrono::high_resolution_clock::now();
-    std::set<int> documentos = documentosQueContienen(patron, T, SA, posiciones);
+    
+    int total_coincidencias = 0;
+    size_t total_espacio_bytes = 0;
+    
+    // Procesar cada patrón
+    for (const auto& patron : patrones) {
+        auto resultado = documentosQueContienen(const_cast<std::string&>(patron), T, SA, posiciones);
+        std::set<int> documentos = resultado.first;
+        int coincidencias = resultado.second;
+        
+        total_coincidencias += coincidencias;
+        total_espacio_bytes += documentos.size() * sizeof(int);
+    }
+    
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed = end - start;
 
-    size_t espacio_bytes = documentos.size() * sizeof(int);
-    double espacio_kb = static_cast<double>(espacio_bytes) / 1024.0;
-    double espacio_mb = espacio_kb / 1024.0;
-
-    std::cout << "SA;" << elapsed.count() << ";" << num_documentos << ";" << espacio_bytes << std::endl;
+    std::cout << "SA;" << total_patrones << ";" << elapsed.count() << ";" << total_coincidencias << ";" << num_documentos << ";" << total_espacio_bytes << std::endl;
     return 0;
 }

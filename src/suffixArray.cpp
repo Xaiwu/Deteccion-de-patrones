@@ -60,4 +60,53 @@ std::vector<int> cargarTxt(const std::string& ruta) {
     }
     return datos;
 }
+/*
+// Programa principal para crear un arreglo de sufijos a partir de un texto dado
+int main(int argc, char* argv[]) {
+    if (argc < 3) {
+        std::cerr << "Uso: " << argv[0] << " <carpeta> <num_docs>\n";
+        return 1;
+    }
+    
+    std::string carpetaPath = argv[1];
+    int num_documentos = std::stoi(argv[2]);
+    
+    std::string archivoTxt = "data/textoT.txt";
+    std::string T;
 
+    LectorDocumentos lector;
+
+    // Si el archivo existe, cargarlo, si no, crearlo con lector y guardar
+    if (std::filesystem::exists(archivoTxt)) {
+        T = lector.cargarTxt(archivoTxt);
+    } else {
+        T = lector.concatenarDocumentosConSeparador(carpetaPath, num_documentos);
+        lector.crearTxt(archivoTxt, T);
+    }
+    // Convertir string a char* para buildSuffixArray
+    char* texto = new char[T.length() + 1];
+    strcpy(texto, T.c_str());
+
+    auto start = std::chrono::high_resolution_clock::now();
+    int* suffixArr = buildSuffixArray(texto, T.length());
+    crearTxt(suffixArr, T.length());
+    auto end = std::chrono::high_resolution_clock::now();
+    double tiempo = std::chrono::duration<double>(end - start).count();
+
+    // Calcular espacio utilizado por el suffix array
+    // Cada elemento del array es un int (4 bytes normalmente)
+    size_t espacio_bytes = T.length() * sizeof(int);
+    double espacio_kb = static_cast<double>(espacio_bytes) / 1024.0;
+    double espacio_mb = espacio_kb / 1024.0;
+
+    // Liberar memoria
+    delete[] texto;
+    delete[] suffixArr;
+
+    // Extraer nombre del dataset de la carpeta
+    std::string dataset = carpetaPath.substr(carpetaPath.find_last_of("/\\") + 1);
+    
+    std::cout << "SuffixArray;" << dataset << ";" << num_documentos << ";" << tiempo << ";" << espacio_mb << std::endl;
+    return 0;
+}
+*/
