@@ -1,5 +1,12 @@
 #include "..\include\KMP.h"
 
+/**
+ * Implementación del algoritmo KMP (Knuth-Morris-Pratt) para la búsqueda de patrones.
+ * Basada en https://cp-algorithms.com/string/prefix-function.html
+ * 
+ */
+
+
 // Búsqueda del prefijo más largo y que a su vez sea sufijo
 std::vector<int> calcularPI(const std::string &patron) {
     int m = patron.length(); // Tamaño del patrón
