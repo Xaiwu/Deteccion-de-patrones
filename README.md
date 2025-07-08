@@ -58,6 +58,22 @@ g++ busqueda.cpp LectorDocumentos.cpp suffixArray.cpp -I../include -o busqueda.e
 - `<num_docs>`: Número de documentos a usar
 - `<archivo_patrones>`: Archivo con los patrones a buscar
 
+### Generar el Suffix Array
+
+Para generar el Suffix Array, asegúrate de que el `main` de `suffixArray.cpp` esté **descomentado** y el de `busqueda.cpp` **comentado**.
+
+
+```sh
+./genera_suffixArray.exe <carpeta_textos> <num_docs>
+```
+- `<carpeta_textos>`: Carpeta con los documentos de texto a concatenar.
+- `<num_docs>`: Número de documentos a usar para la concatenación.
+
+Esto creará el archivo `data/suffixArray.txt` y mostrará información sobre el tiempo y espacio utilizado.
+
+
+
+
 ## Ejemplo de uso
 
 ```sh
