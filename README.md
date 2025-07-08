@@ -26,6 +26,16 @@ g++ busqueda.cpp LectorDocumentos.cpp suffixArray.cpp -I../include -o busqueda.e
 > Si tus archivos fuente están en otras carpetas, ajusta las rutas según corresponda.  
 > El parámetro `-I../include` asegura que los headers se encuentren correctamente.
 
+> **IMPORTANTE:**  
+> Para evitar errores de compilación por múltiples funciones `main`,  
+> **debes descomentar el `main` de `suffixArray.cpp` solo cuando quieras generar el Suffix Array**  
+> y comentar el `main` de `busqueda.cpp`.  
+>  
+> Cuando quieras compilar y ejecutar la búsqueda, **comenta el `main` de `suffixArray.cpp` y descomenta el de `busqueda.cpp`**.  
+>  
+> **Nunca deben estar ambos `main` activos al mismo tiempo.**
+
+
 ## Ejecución
 
 ### Ejecutar el programa principal
@@ -71,35 +81,6 @@ g++ busqueda.cpp LectorDocumentos.cpp suffixArray.cpp -I../include -o busqueda.e
 > **Nota:**  
 > Si tus archivos fuente están en otras carpetas, ajusta las rutas según corresponda.  
 > El parámetro `-I../include` asegura que los headers se encuentren correctamente.
-
-## Ejecución
-
-### Ejecutar el programa principal
-
-```sh
-./main.exe <algoritmo> <carpeta_textos> <archivo_patrones> <num_docs>
-```
-- `<algoritmo>`: KMP, BM o RK
-- `<carpeta_textos>`: Carpeta con los documentos de texto
-- `<archivo_patrones>`: Archivo con los patrones a buscar
-- `<num_docs>`: Número de documentos a usar
-
-### Ejecutar búsqueda con Suffix Array
-
-```sh
-./busqueda.exe <suffix_array_file> <carpeta_textos> <num_docs> <archivo_patrones>
-```
-- `<suffix_array_file>`: Archivo con el Suffix Array
-- `<carpeta_textos>`: Carpeta con los documentos de texto
-- `<num_docs>`: Número de documentos a usar
-- `<archivo_patrones>`: Archivo con los patrones a buscar
-
-## Ejemplo de uso
-
-```sh
-./main.exe KMP ../data/textos/DNA ../data/patrones/pDNA100.txt 1
-./busqueda.exe ../data/suffix_arrays/suffixArray_DNA_1.txt ../data/textos/DNA 1 ../data/patrones/pDNA100.txt
-```
 
 ## Notas
 
