@@ -20,8 +20,6 @@ int main(int argc, char* argv[]) {
     std::string T;
 
     LectorDocumentos lector;
-    std::vector<std::string> nombres_documentos = lector.leerPorLineas("../data/orden_documentos.txt");
-    std::vector<int> coincidencias_doc(nombres_documentos.size(), 0);
 
     // Si el archivo existe, cargarlo, si no, crearlo con lector y guardar
     if (std::filesystem::exists(archivoTxt)) {
@@ -31,6 +29,8 @@ int main(int argc, char* argv[]) {
         lector.crearTxt(archivoTxt, T);
     }
 
+    std::vector<std::string> nombres_documentos = lector.leerPorLineas("data/orden_documentos.txt");
+    std::vector<int> coincidencias_doc(nombres_documentos.size(), 0);
 
     // Leer todos los patrones
     std::vector<std::string> patrones = lector.leerPorLineas(archivoPatrones);

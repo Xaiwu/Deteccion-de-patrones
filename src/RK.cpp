@@ -44,7 +44,8 @@ int rabinKarp(std::string &patron, std::string &text, std::vector<int> &coincide
             }
             if (match) {
                 matches++;
-                coincidencias_doc[doc]++;
+                if (doc < coincidencias_doc.size())
+                    coincidencias_doc[doc]++;
             }
         }
         

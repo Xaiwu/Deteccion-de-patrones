@@ -1,0 +1,300 @@
+    
+   b
+   o
+   {
+  0x
+  ai
+ (ad
+ *) 
+ *po
+ *si
+ 0x0
+ 0x1
+ 0xa
+ < c
+ = t
+ CDB
+ Raw
+ Som
+ a s
+ asc
+ boo
+ cha
+ if 
+ ioc
+ p->
+ pro
+ rea
+ tak
+ the
+ to 
+ whe
+ {PC
+!dma
+")) 
+#inc
+& ~(
+&u->
+(&de
+((po
+(ahd
+(bro
+(p, 
+) ex
+* A 
+* so
+*** 
+****
++i) 
+, co
+, ri
+->io
+->rs
+-EIN
+.sta
+/* S
+/* T
+0,  
+031_
+0FFF
+0x08
+0x09
+0x3f
+0x45
+0xfe
+5->t
+7_ff
+>mac
+ADDR
+AGE_
+AHA_
+AHC_
+ANY;
+ARNI
+AWAI
+BAD_
+BUFF
+CB_R
+Clos
+DMAS
+DONT
+DT '
+E0);
+EA_S
+EQ w
+EXPR
+E_MA
+GLOO
+G_TE
+ID_A
+ID_C
+MEM)
+ND_M
+NOME
+NONE
+Name
+ONTR
+OOT_
+O_RE
+POIN
+PORT
+PWEN
+ROM_
+R_GE
+SC_P
+SIR 
+SPLT
+TAT_
+VAR 
+VC_V
+ZE <
+\n")
+_BEG
+_CHI
+_COD
+_MAX
+_RDM
+_STA
+_TYP
+_add
+_bas
+_cb 
+_div
+_dvc
+_t *
+_t1t
+_tab
+a wi
+a) {
+a[3]
+absm
+addr
+ag:%
+ahd_
+ali_
+ansm
+ards
+arge
+art)
+ary_
+ate 
+aux_
+b->t
+b/s 
+b_le
+bstr
+bug_
+bus_
+byte
+c vo
+cili
+cond
+ct a
+ct s
+d */
+d OT
+d ch
+d ha
+d_ab
+d_mo
+dden
+def 
+dev)
+devi
+e *s
+e |=
+ecke
+ect 
+ectl
+ed.i
+edul
+eets
+efin
+egis
+ence
+ener
+ent,
+es =
+etur
+evic
+f->s
+forc
+fru.
+ger.
+ging
+gned
+hd_d
+heck
+his_
+i ==
+i Ma
+ias_
+ic7x
+ied 
+ient
+if /
+ifnd
+ime)
+ing 
+inpu
+int 
+intr
+ion.
+is l
+ist(
+le(s
+len 
+lied
+ll c
+long
+lot-
+macr
+map 
+mati
+md->
+mixe
+mum 
+n (s
+n vo
+nel 
+ngom
+nt8_
+nux/
+odec
+of o
+omma
+one 
+ors 
+ost 
+ow a
+per 
+ppr_
+ptr,
+q_gf
+quen
+queu
+r a 
+r[0]
+r_li
+r_op
+ream
+retu
+rite
+role
+ry.i
+s sl
+s, s
+scp)
+scsi
+set_
+sign
+sin6
+size
+sk->
+sk_l
+sk_s
+sn't
+st(s
+st->
+stru
+suff
+t sd
+t wi
+t(&a
+t32_
+t_mi
+ta n
+tart
+tek-
+ter 
+ters
+than
+the 
+tl(s
+truc
+try 
+turn
+type
+ub-l
+uct 
+uctu
+udin
+uenc
+uff 
+unt)
+upda
+uppo
+ur_r
+ut W
+vRea
+v_at
+x, 0
+x00)
+x60:
+x7e,
+x_pk
+xfe,
+xx_h
+y se
+ype_
+} el
