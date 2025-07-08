@@ -1,6 +1,7 @@
 #include "..\include\busqueda.h"
 #include "..\include\suffixArray.h"
 #include "..\include\LectorDocumentos.h"
+#include "..\include\memoria.h"
 #include <fstream>
 #include <utility>
 
@@ -114,7 +115,7 @@ int main(int argc, char* argv[]) {
     auto start = std::chrono::high_resolution_clock::now();
     
     int total_coincidencias = 0;
-    size_t total_espacio_bytes = 0;
+    
     
     // Procesar cada patrón
     for (const auto& patron : patrones) {
@@ -123,8 +124,10 @@ int main(int argc, char* argv[]) {
         int coincidencias = resultado.second;
         
         total_coincidencias += coincidencias;
-        total_espacio_bytes += documentos.size() * sizeof(int);
+
     }
+
+    size_t total_espacio_bytes = getMemoryUsage() * 1024;
     
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed = end - start;

@@ -3,6 +3,7 @@
 #include "..\include\KMP.h"
 #include "..\include\BM.h"
 #include "..\include\RK.h"
+#include "..\include\memoria.h"
 #include <chrono>
 
 
@@ -38,13 +39,17 @@ int main(int argc, char* argv[]) {
     //     std::cout << patrom << std::endl;
     // }
     // std::cout << patrones.size() << std::endl;
-    
+   // size_t total_espacio_bytesA = getMemoryUsage();
     std::vector<int> coincidencias;
     auto start = std::chrono::high_resolution_clock::now();
     for (auto& patron : patrones) {
         int veces = 0;
         if (algoritmo == "KMP") {
+            size_t total_espacio_bytesAT = getMemoryUsage();
             veces = KMP(patron, T, coincidencias_doc);
+            size_t total_espacio_bytesDT = getMemoryUsage();
+            std::cout << "Espacio usado por KMP: " << total_espacio_bytesDT - total_espacio_bytesAT << " bytes\n";
+
         } else if (algoritmo == "BM") {
             veces = boyerMoore(patron, T, coincidencias_doc);
         } else if (algoritmo == "RK") {
@@ -58,12 +63,14 @@ int main(int argc, char* argv[]) {
     auto end = std::chrono::high_resolution_clock::now();
     double tiempo = std::chrono::duration<double>(end - start).count();
     int total_coincidencias = std::accumulate(coincidencias.begin(), coincidencias.end(), 0);
-    
+    // size_t total_espacio_bytesD = getMemoryUsage();
+    // size_t total_espacio_bytes = total_espacio_bytesD - total_espacio_bytesA;
 
     std::cout << algoritmo << ";" << patrones.size()
               << ";" << tiempo
               << ";" << total_coincidencias
               << ";" << num_documentos
+              // << ";" << total_espacio_bytes
               << std::endl;
 
     return 0;
