@@ -1,5 +1,0 @@
-dna_00
-dna_01
-dna_02
-dna_03
-dna_04
