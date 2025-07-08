@@ -22,6 +22,12 @@ g++ main.cpp LectorDocumentos.cpp KMP.cpp BM.cpp RK.cpp -I../include -o main.exe
 g++ busqueda.cpp LectorDocumentos.cpp suffixArray.cpp -I../include -o busqueda.exe
 ```
 
+### Compilar el ejecutable de búsqueda con Suffix Array (`genera_suffixArray.exe`):
+
+```sh
+g++ suffixArray.cpp LectorDocumentos.cpp -I../include -o genera_suffixArray.exe
+```
+
 > **Nota:**  
 > Si tus archivos fuente están en otras carpetas, ajusta las rutas según corresponda.  
 > El parámetro `-I../include` asegura que los headers se encuentren correctamente.
@@ -88,15 +94,6 @@ Esto creará el archivo `data/suffixArray.txt` y mostrará información sobre el
 
 
 
-### Compilar el ejecutable de búsqueda con Suffix Array (`busqueda.exe`):
-
-```sh
-g++ busqueda.cpp LectorDocumentos.cpp suffixArray.cpp -I../include -o busqueda.exe
-```
-
-> **Nota:**  
-> Si tus archivos fuente están en otras carpetas, ajusta las rutas según corresponda.  
-> El parámetro `-I../include` asegura que los headers se encuentren correctamente.
 
 ## Notas
 
